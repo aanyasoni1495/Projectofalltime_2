@@ -1,0 +1,40 @@
+/* Design tokens: colors, spacing, sizing, and anything else shared across the app. */
+:root {
+  /* Palette */
+  --color-table: #e6e6e2;
+  --color-ink: #0a0a0a;
+  --color-paper: #ffffff;
+  --color-gray: #9a9a96;
+  --color-red: #e5342a;
+  --color-ghost-1: #f4f4f1;
+  --color-ghost-2: #ededea;
+
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  /* Hero dimensions — overridden inside .stage-group with container units */
+  --hero-w: 500px;
+  --hero-h: clamp(380px, calc(100svh - 260px), 680px);
+  --hint-w: 380px;
+  --hint-tab: 64px;
+
+  /* Shadow */
+  --shadow-hero: 0 30px 60px -15px rgba(10, 10, 10, 0.45);
+  --shadow-card: 0 8px 24px -8px rgba(10, 10, 10, 0.2);
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --dur: 200ms;
+}

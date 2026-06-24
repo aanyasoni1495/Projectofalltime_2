@@ -1,0 +1,2860 @@
+{
+  "archetypes": [
+    {
+      "archetype_id": "A01",
+      "archetype_name": "Social/Content Feed",
+      "meta_tags": "engagement_driven",
+      "notes": "Algorithmic feeds; LinkedIn/Reddit have some distinct features"
+    },
+    {
+      "archetype_id": "A02",
+      "archetype_name": "Subscription Streaming (Video)",
+      "meta_tags": "subscription;content_library",
+      "notes": null
+    },
+    {
+      "archetype_id": "A03",
+      "archetype_name": "Audio/Podcast",
+      "meta_tags": "subscription;content_library",
+      "notes": "Freemium + ad-supported tiers"
+    },
+    {
+      "archetype_id": "A04",
+      "archetype_name": "E-commerce Marketplace",
+      "meta_tags": "two_sided_marketplace",
+      "notes": "Depop/eBay are C2C; Amazon mixed"
+    },
+    {
+      "archetype_id": "A05",
+      "archetype_name": "Fashion/Apparel Retail",
+      "meta_tags": "first_party_retail;omnichannel",
+      "notes": "Single-brand inventory + physical stores"
+    },
+    {
+      "archetype_id": "A06",
+      "archetype_name": "Ride-hailing/On-demand Transport",
+      "meta_tags": "two_sided_marketplace;on_demand",
+      "notes": "Waymo is AV (no driver segment)"
+    },
+    {
+      "archetype_id": "A07",
+      "archetype_name": "Food Delivery",
+      "meta_tags": "two_sided_marketplace;on_demand",
+      "notes": "Three-sided: eater/courier/restaurant"
+    },
+    {
+      "archetype_id": "A08",
+      "archetype_name": "QSR/Restaurant Apps",
+      "meta_tags": "first_party_retail;loyalty",
+      "notes": "First-party ordering + loyalty"
+    },
+    {
+      "archetype_id": "A09",
+      "archetype_name": "Grocery/Retail Delivery",
+      "meta_tags": "two_sided_marketplace;on_demand",
+      "notes": "Mixed first-party + delivery"
+    },
+    {
+      "archetype_id": "A10",
+      "archetype_name": "B2B SaaS/Productivity",
+      "meta_tags": "subscription;b2b",
+      "notes": "Seat-based; admin vs end-user"
+    },
+    {
+      "archetype_id": "A11",
+      "archetype_name": "Fintech/Payments",
+      "meta_tags": "transactional;regulated",
+      "notes": "Fraud/compliance heavy"
+    },
+    {
+      "archetype_id": "A12",
+      "archetype_name": "Travel/Booking",
+      "meta_tags": "two_sided_marketplace",
+      "notes": "Airbnb two-sided; OTAs aggregator"
+    },
+    {
+      "archetype_id": "A13",
+      "archetype_name": "Dating",
+      "meta_tags": "engagement_driven;matching",
+      "notes": "Two-sided matching dynamics"
+    },
+    {
+      "archetype_id": "A14",
+      "archetype_name": "EdTech",
+      "meta_tags": "subscription;content_library",
+      "notes": "Learner outcomes + completion"
+    },
+    {
+      "archetype_id": "A15",
+      "archetype_name": "Health/Fitness",
+      "meta_tags": "subscription;engagement_driven",
+      "notes": "Hardware (Peloton/Whoop) + app"
+    },
+    {
+      "archetype_id": "A16",
+      "archetype_name": "Gaming",
+      "meta_tags": "engagement_driven;f2p_monetization",
+      "notes": "Mobile F2P; ARPDAU/whales"
+    },
+    {
+      "archetype_id": "A17",
+      "archetype_name": "Communication/Messaging",
+      "meta_tags": "engagement_driven;network_effects",
+      "notes": null
+    },
+    {
+      "archetype_id": "A18",
+      "archetype_name": "Search/Local Discovery",
+      "meta_tags": "engagement_driven;ad_supported",
+      "notes": "Query-driven; local listings"
+    },
+    {
+      "archetype_id": "A19",
+      "archetype_name": "News/Media/Publishing",
+      "meta_tags": "subscription;ad_supported;content_library",
+      "notes": "Paywall + creator (Substack)"
+    },
+    {
+      "archetype_id": "A20",
+      "archetype_name": "Cloud Infrastructure",
+      "meta_tags": "b2b;usage_based",
+      "notes": "Developer-facing; fully custom pools"
+    },
+    {
+      "archetype_id": "A21",
+      "archetype_name": "AI Apps/Models",
+      "meta_tags": "b2b;b2c;usage_based",
+      "notes": "Chat assistants, model APIs"
+    },
+    {
+      "archetype_id": "A22",
+      "archetype_name": "Chips/Hardware",
+      "meta_tags": "b2b;hardware",
+      "notes": "GPUs/accelerators; long sales cycles"
+    }
+  ],
+  "companies": [
+    {
+      "company_id": "C01",
+      "company_name": "Instagram",
+      "archetype_id": "A01",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C02",
+      "company_name": "TikTok",
+      "archetype_id": "A01",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C03",
+      "company_name": "X",
+      "archetype_id": "A01",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C04",
+      "company_name": "Pinterest",
+      "archetype_id": "A01",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C05",
+      "company_name": "LinkedIn",
+      "archetype_id": "A01",
+      "use_as_named_brand": "Y",
+      "notes": "Also job marketplace"
+    },
+    {
+      "company_id": "C06",
+      "company_name": "Reddit",
+      "archetype_id": "A01",
+      "use_as_named_brand": "Y",
+      "notes": "Community/forum"
+    },
+    {
+      "company_id": "C07",
+      "company_name": "Netflix",
+      "archetype_id": "A02",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C08",
+      "company_name": "Disney+",
+      "archetype_id": "A02",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C09",
+      "company_name": "HBO Max",
+      "archetype_id": "A02",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C10",
+      "company_name": "YouTube",
+      "archetype_id": "A02",
+      "use_as_named_brand": "Y",
+      "notes": "Also ad-supported"
+    },
+    {
+      "company_id": "C11",
+      "company_name": "Spotify",
+      "archetype_id": "A03",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C12",
+      "company_name": "Audible",
+      "archetype_id": "A03",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C13",
+      "company_name": "Apple Podcasts",
+      "archetype_id": "A03",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C14",
+      "company_name": "SoundCloud",
+      "archetype_id": "A03",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C15",
+      "company_name": "Amazon",
+      "archetype_id": "A04",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C16",
+      "company_name": "Depop",
+      "archetype_id": "A04",
+      "use_as_named_brand": "Y",
+      "notes": "C2C resale"
+    },
+    {
+      "company_id": "C17",
+      "company_name": "eBay",
+      "archetype_id": "A04",
+      "use_as_named_brand": "Y",
+      "notes": "C2C auction"
+    },
+    {
+      "company_id": "C18",
+      "company_name": "Zara",
+      "archetype_id": "A05",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C19",
+      "company_name": "H&M",
+      "archetype_id": "A05",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C20",
+      "company_name": "Nike",
+      "archetype_id": "A05",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C21",
+      "company_name": "Uniqlo",
+      "archetype_id": "A05",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C22",
+      "company_name": "Uber",
+      "archetype_id": "A06",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C23",
+      "company_name": "Lyft",
+      "archetype_id": "A06",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C24",
+      "company_name": "Waymo",
+      "archetype_id": "A06",
+      "use_as_named_brand": "Y",
+      "notes": "No driver segment"
+    },
+    {
+      "company_id": "C25",
+      "company_name": "DoorDash",
+      "archetype_id": "A07",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C26",
+      "company_name": "Uber Eats",
+      "archetype_id": "A07",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C27",
+      "company_name": "Grubhub",
+      "archetype_id": "A07",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C28",
+      "company_name": "Starbucks",
+      "archetype_id": "A08",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C29",
+      "company_name": "McDonald's",
+      "archetype_id": "A08",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C30",
+      "company_name": "Chipotle",
+      "archetype_id": "A08",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C31",
+      "company_name": "Domino's",
+      "archetype_id": "A08",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C32",
+      "company_name": "Trader Joe's",
+      "archetype_id": "A09",
+      "use_as_named_brand": "Y",
+      "notes": "No delivery app, in-store only"
+    },
+    {
+      "company_id": "C33",
+      "company_name": "Walmart",
+      "archetype_id": "A09",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C34",
+      "company_name": "Target",
+      "archetype_id": "A09",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C35",
+      "company_name": "Costco",
+      "archetype_id": "A09",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C36",
+      "company_name": "Slack",
+      "archetype_id": "A10",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C37",
+      "company_name": "Notion",
+      "archetype_id": "A10",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C38",
+      "company_name": "Asana",
+      "archetype_id": "A10",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C39",
+      "company_name": "Microsoft Teams",
+      "archetype_id": "A10",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C40",
+      "company_name": "PayPal",
+      "archetype_id": "A11",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C41",
+      "company_name": "Venmo",
+      "archetype_id": "A11",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C42",
+      "company_name": "Stripe",
+      "archetype_id": "A11",
+      "use_as_named_brand": "Y",
+      "notes": "B2B payments infra"
+    },
+    {
+      "company_id": "C43",
+      "company_name": "Cash App",
+      "archetype_id": "A11",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C44",
+      "company_name": "Airbnb",
+      "archetype_id": "A12",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C45",
+      "company_name": "Booking.com",
+      "archetype_id": "A12",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C46",
+      "company_name": "Expedia",
+      "archetype_id": "A12",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C47",
+      "company_name": "Tinder",
+      "archetype_id": "A13",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C48",
+      "company_name": "Hinge",
+      "archetype_id": "A13",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C49",
+      "company_name": "Bumble",
+      "archetype_id": "A13",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C50",
+      "company_name": "Duolingo",
+      "archetype_id": "A14",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C51",
+      "company_name": "Coursera",
+      "archetype_id": "A14",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C52",
+      "company_name": "Khan Academy",
+      "archetype_id": "A14",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C53",
+      "company_name": "Chegg",
+      "archetype_id": "A14",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C54",
+      "company_name": "Strava",
+      "archetype_id": "A15",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C55",
+      "company_name": "MyFitnessPal",
+      "archetype_id": "A15",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C56",
+      "company_name": "Peloton",
+      "archetype_id": "A15",
+      "use_as_named_brand": "Y",
+      "notes": "Hardware"
+    },
+    {
+      "company_id": "C57",
+      "company_name": "Whoop",
+      "archetype_id": "A15",
+      "use_as_named_brand": "Y",
+      "notes": "Wearable"
+    },
+    {
+      "company_id": "C58",
+      "company_name": "Clash Royale",
+      "archetype_id": "A16",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C59",
+      "company_name": "Call of Duty",
+      "archetype_id": "A16",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C60",
+      "company_name": "FIFA (EA FC)",
+      "archetype_id": "A16",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C61",
+      "company_name": "WhatsApp",
+      "archetype_id": "A17",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C62",
+      "company_name": "Discord",
+      "archetype_id": "A17",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C63",
+      "company_name": "Zoom",
+      "archetype_id": "A17",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C64",
+      "company_name": "Telegram",
+      "archetype_id": "A17",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C65",
+      "company_name": "Google Search",
+      "archetype_id": "A18",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C66",
+      "company_name": "Yelp",
+      "archetype_id": "A18",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C67",
+      "company_name": "TripAdvisor",
+      "archetype_id": "A18",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C68",
+      "company_name": "Google Maps",
+      "archetype_id": "A18",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C69",
+      "company_name": "NYT",
+      "archetype_id": "A19",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C70",
+      "company_name": "Substack",
+      "archetype_id": "A19",
+      "use_as_named_brand": "Y",
+      "notes": "Creator platform"
+    },
+    {
+      "company_id": "C71",
+      "company_name": "Medium",
+      "archetype_id": "A19",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C72",
+      "company_name": "Apple News",
+      "archetype_id": "A19",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C73",
+      "company_name": "AWS",
+      "archetype_id": "A20",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C74",
+      "company_name": "Azure",
+      "archetype_id": "A20",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C75",
+      "company_name": "Cloudflare",
+      "archetype_id": "A20",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C76",
+      "company_name": "Google Cloud",
+      "archetype_id": "A20",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C77",
+      "company_name": "OpenAI",
+      "archetype_id": "A21",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C78",
+      "company_name": "Anthropic",
+      "archetype_id": "A21",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C79",
+      "company_name": "Perplexity",
+      "archetype_id": "A21",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C80",
+      "company_name": "Google Gemini",
+      "archetype_id": "A21",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C81",
+      "company_name": "Nvidia",
+      "archetype_id": "A22",
+      "use_as_named_brand": "Y",
+      "notes": null
+    },
+    {
+      "company_id": "C82",
+      "company_name": "AMD",
+      "archetype_id": "A22",
+      "use_as_named_brand": "Y",
+      "notes": null
+    }
+  ],
+  "features": [
+    {
+      "feature_id": "F001",
+      "feature_name": "Stories",
+      "archetype_id": "A01",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F002",
+      "feature_name": "the Explore/Discover feed",
+      "archetype_id": "A01",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F003",
+      "feature_name": "Reels",
+      "archetype_id": "A01",
+      "company_id": "C01",
+      "scope": "feature",
+      "notes": "IG-specific"
+    },
+    {
+      "feature_id": "F004",
+      "feature_name": "the For You Page",
+      "archetype_id": "A01",
+      "company_id": "C02",
+      "scope": "feature",
+      "notes": "TikTok"
+    },
+    {
+      "feature_id": "F005",
+      "feature_name": "direct messaging",
+      "archetype_id": "A01",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F006",
+      "feature_name": "the job listings feed",
+      "archetype_id": "A01",
+      "company_id": "C05",
+      "scope": "feature",
+      "notes": "LinkedIn"
+    },
+    {
+      "feature_id": "F007",
+      "feature_name": "community moderation tools",
+      "archetype_id": "A01",
+      "company_id": "C06",
+      "scope": "feature",
+      "notes": "Reddit"
+    },
+    {
+      "feature_id": "F008",
+      "feature_name": "content recommendations",
+      "archetype_id": "A02",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F009",
+      "feature_name": "the continue-watching row",
+      "archetype_id": "A02",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F010",
+      "feature_name": "downloads for offline viewing",
+      "archetype_id": "A02",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F011",
+      "feature_name": "profile/multi-user support",
+      "archetype_id": "A02",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F012",
+      "feature_name": "the skip-intro button",
+      "archetype_id": "A02",
+      "company_id": "C07",
+      "scope": "feature",
+      "notes": "Netflix"
+    },
+    {
+      "feature_id": "F013",
+      "feature_name": "playlist creation",
+      "archetype_id": "A03",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F014",
+      "feature_name": "podcast discovery",
+      "archetype_id": "A03",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F015",
+      "feature_name": "Discover Weekly",
+      "archetype_id": "A03",
+      "company_id": "C11",
+      "scope": "feature",
+      "notes": "Spotify"
+    },
+    {
+      "feature_id": "F016",
+      "feature_name": "offline downloads",
+      "archetype_id": "A03",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F017",
+      "feature_name": "product search",
+      "archetype_id": "A04",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F018",
+      "feature_name": "checkout",
+      "archetype_id": "A04",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F019",
+      "feature_name": "reviews & ratings",
+      "archetype_id": "A04",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F020",
+      "feature_name": "seller listing tools",
+      "archetype_id": "A04",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F021",
+      "feature_name": "the recommendations carousel",
+      "archetype_id": "A04",
+      "company_id": "C15",
+      "scope": "feature",
+      "notes": "Amazon"
+    },
+    {
+      "feature_id": "F022",
+      "feature_name": "size/fit guidance",
+      "archetype_id": "A05",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F023",
+      "feature_name": "in-store pickup",
+      "archetype_id": "A05",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F024",
+      "feature_name": "the loyalty program",
+      "archetype_id": "A05",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F025",
+      "feature_name": "virtual try-on",
+      "archetype_id": "A05",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F026",
+      "feature_name": "driver-rider matching",
+      "archetype_id": "A06",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F027",
+      "feature_name": "surge pricing",
+      "archetype_id": "A06",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F028",
+      "feature_name": "live trip tracking",
+      "archetype_id": "A06",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F029",
+      "feature_name": "ride pooling",
+      "archetype_id": "A06",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F030",
+      "feature_name": "restaurant discovery",
+      "archetype_id": "A07",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F031",
+      "feature_name": "order tracking",
+      "archetype_id": "A07",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F032",
+      "feature_name": "group ordering",
+      "archetype_id": "A07",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F033",
+      "feature_name": "courier dispatch",
+      "archetype_id": "A07",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F034",
+      "feature_name": "mobile order-ahead",
+      "archetype_id": "A08",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F035",
+      "feature_name": "the rewards program",
+      "archetype_id": "A08",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F036",
+      "feature_name": "store locator",
+      "archetype_id": "A08",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F037",
+      "feature_name": "menu customization",
+      "archetype_id": "A08",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F038",
+      "feature_name": "substitution handling",
+      "archetype_id": "A09",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F039",
+      "feature_name": "curbside pickup",
+      "archetype_id": "A09",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F040",
+      "feature_name": "the digital weekly circular",
+      "archetype_id": "A09",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F041",
+      "feature_name": "reorder/shopping lists",
+      "archetype_id": "A09",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F042",
+      "feature_name": "real-time collaboration",
+      "archetype_id": "A10",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F043",
+      "feature_name": "notifications & mentions",
+      "archetype_id": "A10",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F044",
+      "feature_name": "the admin/permissions console",
+      "archetype_id": "A10",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F045",
+      "feature_name": "search across workspace",
+      "archetype_id": "A10",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F046",
+      "feature_name": "integrations/app directory",
+      "archetype_id": "A10",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F047",
+      "feature_name": "peer-to-peer transfers",
+      "archetype_id": "A11",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F048",
+      "feature_name": "fraud detection",
+      "archetype_id": "A11",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F049",
+      "feature_name": "the transaction feed",
+      "archetype_id": "A11",
+      "company_id": "C41",
+      "scope": "feature",
+      "notes": "Venmo social feed"
+    },
+    {
+      "feature_id": "F050",
+      "feature_name": "instant deposit",
+      "archetype_id": "A11",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F051",
+      "feature_name": "search & filters",
+      "archetype_id": "A12",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F052",
+      "feature_name": "booking & checkout",
+      "archetype_id": "A12",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F053",
+      "feature_name": "host onboarding",
+      "archetype_id": "A12",
+      "company_id": "C44",
+      "scope": "feature",
+      "notes": "Airbnb"
+    },
+    {
+      "feature_id": "F054",
+      "feature_name": "reviews",
+      "archetype_id": "A12",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F055",
+      "feature_name": "the matching algorithm",
+      "archetype_id": "A13",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F056",
+      "feature_name": "profile creation",
+      "archetype_id": "A13",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F057",
+      "feature_name": "the swipe interface",
+      "archetype_id": "A13",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F058",
+      "feature_name": "in-app messaging",
+      "archetype_id": "A13",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F059",
+      "feature_name": "the lesson streak",
+      "archetype_id": "A14",
+      "company_id": "C50",
+      "scope": "feature",
+      "notes": "Duolingo"
+    },
+    {
+      "feature_id": "F060",
+      "feature_name": "progress tracking",
+      "archetype_id": "A14",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F061",
+      "feature_name": "course discovery",
+      "archetype_id": "A14",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F062",
+      "feature_name": "quizzes & assessments",
+      "archetype_id": "A14",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F063",
+      "feature_name": "workout tracking",
+      "archetype_id": "A15",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F064",
+      "feature_name": "social challenges",
+      "archetype_id": "A15",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F065",
+      "feature_name": "the activity feed",
+      "archetype_id": "A15",
+      "company_id": "C54",
+      "scope": "feature",
+      "notes": "Strava"
+    },
+    {
+      "feature_id": "F066",
+      "feature_name": "sleep/recovery scoring",
+      "archetype_id": "A15",
+      "company_id": "C57",
+      "scope": "feature",
+      "notes": "Whoop"
+    },
+    {
+      "feature_id": "F067",
+      "feature_name": "the matchmaking system",
+      "archetype_id": "A16",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F068",
+      "feature_name": "in-game purchases",
+      "archetype_id": "A16",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F069",
+      "feature_name": "the battle pass",
+      "archetype_id": "A16",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F070",
+      "feature_name": "clan/guild features",
+      "archetype_id": "A16",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F071",
+      "feature_name": "group chats",
+      "archetype_id": "A17",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F072",
+      "feature_name": "voice/video calls",
+      "archetype_id": "A17",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F073",
+      "feature_name": "message reactions",
+      "archetype_id": "A17",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F074",
+      "feature_name": "disappearing messages",
+      "archetype_id": "A17",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F075",
+      "feature_name": "autocomplete",
+      "archetype_id": "A18",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F076",
+      "feature_name": "local business listings",
+      "archetype_id": "A18",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F077",
+      "feature_name": "reviews & photos",
+      "archetype_id": "A18",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F078",
+      "feature_name": "maps navigation",
+      "archetype_id": "A18",
+      "company_id": "C68",
+      "scope": "feature",
+      "notes": "Google Maps"
+    },
+    {
+      "feature_id": "F079",
+      "feature_name": "the paywall",
+      "archetype_id": "A19",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F080",
+      "feature_name": "personalized recommendations",
+      "archetype_id": "A19",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F081",
+      "feature_name": "the comments section",
+      "archetype_id": "A19",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F082",
+      "feature_name": "newsletter subscriptions",
+      "archetype_id": "A19",
+      "company_id": "C70",
+      "scope": "feature",
+      "notes": "Substack"
+    },
+    {
+      "feature_id": "F083",
+      "feature_name": "auto-scaling",
+      "archetype_id": "A20",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F084",
+      "feature_name": "the billing/cost dashboard",
+      "archetype_id": "A20",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F085",
+      "feature_name": "access management (IAM)",
+      "archetype_id": "A20",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F086",
+      "feature_name": "the API gateway",
+      "archetype_id": "A20",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F087",
+      "feature_name": "the chat assistant",
+      "archetype_id": "A21",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F088",
+      "feature_name": "the model API",
+      "archetype_id": "A21",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F089",
+      "feature_name": "prompt history",
+      "archetype_id": "A21",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F090",
+      "feature_name": "usage/billing dashboard",
+      "archetype_id": "A21",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F091",
+      "feature_name": "custom GPTs",
+      "archetype_id": "A21",
+      "company_id": "C77",
+      "scope": "feature",
+      "notes": "OpenAI"
+    },
+    {
+      "feature_id": "F092",
+      "feature_name": "Projects",
+      "archetype_id": "A21",
+      "company_id": "C78",
+      "scope": "feature",
+      "notes": "Anthropic"
+    },
+    {
+      "feature_id": "F093",
+      "feature_name": "the developer SDK",
+      "archetype_id": "A22",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F094",
+      "feature_name": "the driver/firmware stack",
+      "archetype_id": "A22",
+      "company_id": null,
+      "scope": "feature",
+      "notes": null
+    },
+    {
+      "feature_id": "F095",
+      "feature_name": "data-center GPU lineup",
+      "archetype_id": "A22",
+      "company_id": "C81",
+      "scope": "feature",
+      "notes": "Nvidia"
+    }
+  ],
+  "metrics": [
+    {
+      "metric_id": "M001",
+      "metric_name": "DAU",
+      "archetype_id": "ALL",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": "universal",
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M002",
+      "metric_name": "MAU",
+      "archetype_id": "ALL",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": "universal",
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M003",
+      "metric_name": "WAU",
+      "archetype_id": "ALL",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": "universal",
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M004",
+      "metric_name": "7-day retention",
+      "archetype_id": "ALL",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": "universal",
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M005",
+      "metric_name": "session length",
+      "archetype_id": "ALL",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": "universal",
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M006",
+      "metric_name": "NPS",
+      "archetype_id": "ALL",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": "universal",
+      "growable": "N",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M007",
+      "metric_name": "churn rate",
+      "archetype_id": "ALL",
+      "level": "product",
+      "direction_bad": "SPIKED",
+      "notes": "universal",
+      "growable": "N",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M008",
+      "metric_name": "app crash rate",
+      "archetype_id": "ALL",
+      "level": "product",
+      "direction_bad": "SPIKED",
+      "notes": "universal",
+      "growable": "N",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M009",
+      "metric_name": "customer support tickets",
+      "archetype_id": "ALL",
+      "level": "product",
+      "direction_bad": "SPIKED",
+      "notes": "universal",
+      "growable": "N",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M010",
+      "metric_name": "CAC",
+      "archetype_id": "ALL",
+      "level": "product",
+      "direction_bad": "SPIKED",
+      "notes": "universal",
+      "growable": "N",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M011",
+      "metric_name": "feature adoption rate",
+      "archetype_id": "ALL",
+      "level": "feature",
+      "direction_bad": "DROPPED",
+      "notes": "universal",
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M012",
+      "metric_name": "feature engagement frequency",
+      "archetype_id": "ALL",
+      "level": "feature",
+      "direction_bad": "DROPPED",
+      "notes": "universal",
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M013",
+      "metric_name": "task completion rate",
+      "archetype_id": "ALL",
+      "level": "feature",
+      "direction_bad": "DROPPED",
+      "notes": "universal",
+      "growable": "N",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M014",
+      "metric_name": "time-to-complete",
+      "archetype_id": "ALL",
+      "level": "feature",
+      "direction_bad": "SPIKED",
+      "notes": "universal",
+      "growable": "N",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M015",
+      "metric_name": "feature error rate",
+      "archetype_id": "ALL",
+      "level": "feature",
+      "direction_bad": "SPIKED",
+      "notes": "universal",
+      "growable": "N",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M016",
+      "metric_name": "content creation rate",
+      "archetype_id": "A01",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M017",
+      "metric_name": "feed engagement rate",
+      "archetype_id": "A01",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M018",
+      "metric_name": "watch time per session",
+      "archetype_id": "A02",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M019",
+      "metric_name": "subscriber retention",
+      "archetype_id": "A02",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M020",
+      "metric_name": "content completion rate",
+      "archetype_id": "A02",
+      "level": "feature",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M021",
+      "metric_name": "listening hours",
+      "archetype_id": "A03",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M022",
+      "metric_name": "free-to-paid conversion",
+      "archetype_id": "A03",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M023",
+      "metric_name": "GMV",
+      "archetype_id": "A04",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M024",
+      "metric_name": "take rate",
+      "archetype_id": "A04",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M025",
+      "metric_name": "cart abandonment rate",
+      "archetype_id": "A04",
+      "level": "feature",
+      "direction_bad": "SPIKED",
+      "notes": null,
+      "growable": "N",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M026",
+      "metric_name": "listing-to-sale rate",
+      "archetype_id": "A04",
+      "level": "feature",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M027",
+      "metric_name": "inventory turnover",
+      "archetype_id": "A05",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M028",
+      "metric_name": "return rate",
+      "archetype_id": "A05",
+      "level": "product",
+      "direction_bad": "SPIKED",
+      "notes": null,
+      "growable": "N",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M029",
+      "metric_name": "online-to-store conversion",
+      "archetype_id": "A05",
+      "level": "feature",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M030",
+      "metric_name": "ride completion rate",
+      "archetype_id": "A06",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M031",
+      "metric_name": "driver utilization",
+      "archetype_id": "A06",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M032",
+      "metric_name": "avg pickup time",
+      "archetype_id": "A06",
+      "level": "feature",
+      "direction_bad": "SPIKED",
+      "notes": null,
+      "growable": "N",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M033",
+      "metric_name": "surge frequency",
+      "archetype_id": "A06",
+      "level": "feature",
+      "direction_bad": "SPIKED",
+      "notes": null,
+      "growable": "N",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M034",
+      "metric_name": "order volume",
+      "archetype_id": "A07",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M035",
+      "metric_name": "avg delivery time",
+      "archetype_id": "A07",
+      "level": "feature",
+      "direction_bad": "SPIKED",
+      "notes": null,
+      "growable": "N",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M036",
+      "metric_name": "courier supply",
+      "archetype_id": "A07",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M037",
+      "metric_name": "loyalty enrollment",
+      "archetype_id": "A08",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M038",
+      "metric_name": "order-ahead adoption",
+      "archetype_id": "A08",
+      "level": "feature",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M039",
+      "metric_name": "avg ticket size",
+      "archetype_id": "A08",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M040",
+      "metric_name": "basket size",
+      "archetype_id": "A09",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M041",
+      "metric_name": "substitution acceptance rate",
+      "archetype_id": "A09",
+      "level": "feature",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M042",
+      "metric_name": "fulfillment accuracy",
+      "archetype_id": "A09",
+      "level": "feature",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M043",
+      "metric_name": "seat expansion",
+      "archetype_id": "A10",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M044",
+      "metric_name": "DAU/MAU ratio",
+      "archetype_id": "A10",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M045",
+      "metric_name": "net revenue retention",
+      "archetype_id": "A10",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M046",
+      "metric_name": "transaction volume",
+      "archetype_id": "A11",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M047",
+      "metric_name": "fraud rate",
+      "archetype_id": "A11",
+      "level": "product",
+      "direction_bad": "SPIKED",
+      "notes": null,
+      "growable": "N",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M048",
+      "metric_name": "transaction success rate",
+      "archetype_id": "A11",
+      "level": "feature",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M049",
+      "metric_name": "booking conversion",
+      "archetype_id": "A12",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M050",
+      "metric_name": "repeat booking rate",
+      "archetype_id": "A12",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M051",
+      "metric_name": "listing availability",
+      "archetype_id": "A12",
+      "level": "feature",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M052",
+      "metric_name": "match rate",
+      "archetype_id": "A13",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M053",
+      "metric_name": "message-to-match ratio",
+      "archetype_id": "A13",
+      "level": "feature",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M054",
+      "metric_name": "first-date conversion",
+      "archetype_id": "A13",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M055",
+      "metric_name": "course completion rate",
+      "archetype_id": "A14",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M056",
+      "metric_name": "daily streak retention",
+      "archetype_id": "A14",
+      "level": "feature",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M057",
+      "metric_name": "learner outcomes",
+      "archetype_id": "A14",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M058",
+      "metric_name": "weekly active workouts",
+      "archetype_id": "A15",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M059",
+      "metric_name": "goal completion rate",
+      "archetype_id": "A15",
+      "level": "feature",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M060",
+      "metric_name": "wearable sync rate",
+      "archetype_id": "A15",
+      "level": "feature",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M061",
+      "metric_name": "ARPDAU",
+      "archetype_id": "A16",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M062",
+      "metric_name": "D1/D7/D30 retention",
+      "archetype_id": "A16",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M063",
+      "metric_name": "IAP conversion",
+      "archetype_id": "A16",
+      "level": "feature",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M064",
+      "metric_name": "match wait time",
+      "archetype_id": "A16",
+      "level": "feature",
+      "direction_bad": "SPIKED",
+      "notes": null,
+      "growable": "N",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M065",
+      "metric_name": "messages sent per user",
+      "archetype_id": "A17",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M066",
+      "metric_name": "group creation rate",
+      "archetype_id": "A17",
+      "level": "feature",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M067",
+      "metric_name": "call quality score",
+      "archetype_id": "A17",
+      "level": "feature",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M068",
+      "metric_name": "query success rate",
+      "archetype_id": "A18",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M069",
+      "metric_name": "click-through rate",
+      "archetype_id": "A18",
+      "level": "feature",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M070",
+      "metric_name": "review submission rate",
+      "archetype_id": "A18",
+      "level": "feature",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M071",
+      "metric_name": "paid subscriber count",
+      "archetype_id": "A19",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M072",
+      "metric_name": "paywall conversion",
+      "archetype_id": "A19",
+      "level": "feature",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M073",
+      "metric_name": "articles read per session",
+      "archetype_id": "A19",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M074",
+      "metric_name": "uptime/availability",
+      "archetype_id": "A20",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M075",
+      "metric_name": "API latency",
+      "archetype_id": "A20",
+      "level": "feature",
+      "direction_bad": "SPIKED",
+      "notes": null,
+      "growable": "N",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M076",
+      "metric_name": "cost per request",
+      "archetype_id": "A20",
+      "level": "feature",
+      "direction_bad": "SPIKED",
+      "notes": null,
+      "growable": "N",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M077",
+      "metric_name": "provisioned-to-used ratio",
+      "archetype_id": "A20",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M078",
+      "metric_name": "Acquisition",
+      "archetype_id": "ALL",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": "AARRR driver",
+      "growable": "Y",
+      "aarrr": "Y"
+    },
+    {
+      "metric_id": "M079",
+      "metric_name": "Activation",
+      "archetype_id": "ALL",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": "AARRR driver",
+      "growable": "Y",
+      "aarrr": "Y"
+    },
+    {
+      "metric_id": "M080",
+      "metric_name": "Retention",
+      "archetype_id": "ALL",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": "AARRR driver",
+      "growable": "Y",
+      "aarrr": "Y"
+    },
+    {
+      "metric_id": "M081",
+      "metric_name": "Referral",
+      "archetype_id": "ALL",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": "AARRR driver",
+      "growable": "Y",
+      "aarrr": "Y"
+    },
+    {
+      "metric_id": "M082",
+      "metric_name": "Revenue",
+      "archetype_id": "ALL",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": "AARRR driver",
+      "growable": "Y",
+      "aarrr": "Y"
+    },
+    {
+      "metric_id": "M083",
+      "metric_name": "paid conversion",
+      "archetype_id": "A21",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M084",
+      "metric_name": "tokens processed per user",
+      "archetype_id": "A21",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M085",
+      "metric_name": "API error rate",
+      "archetype_id": "A21",
+      "level": "feature",
+      "direction_bad": "SPIKED",
+      "notes": null,
+      "growable": "N",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M086",
+      "metric_name": "inference latency",
+      "archetype_id": "A21",
+      "level": "feature",
+      "direction_bad": "SPIKED",
+      "notes": null,
+      "growable": "N",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M087",
+      "metric_name": "design-win rate",
+      "archetype_id": "A22",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M088",
+      "metric_name": "chip yield",
+      "archetype_id": "A22",
+      "level": "product",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    },
+    {
+      "metric_id": "M089",
+      "metric_name": "power efficiency (perf/watt)",
+      "archetype_id": "A22",
+      "level": "feature",
+      "direction_bad": "DROPPED",
+      "notes": null,
+      "growable": "Y",
+      "aarrr": "N"
+    }
+  ],
+  "segments": [
+    {
+      "segment_id": "S01",
+      "segment_name": "new/first-time users",
+      "scope": "universal",
+      "archetype_id": null,
+      "notes": null
+    },
+    {
+      "segment_id": "S02",
+      "segment_name": "power users",
+      "scope": "universal",
+      "archetype_id": null,
+      "notes": null
+    },
+    {
+      "segment_id": "S03",
+      "segment_name": "churned/lapsed users",
+      "scope": "universal",
+      "archetype_id": null,
+      "notes": null
+    },
+    {
+      "segment_id": "S04",
+      "segment_name": "older adults (65+)",
+      "scope": "universal",
+      "archetype_id": null,
+      "notes": null
+    },
+    {
+      "segment_id": "S05",
+      "segment_name": "Gen Z users",
+      "scope": "universal",
+      "archetype_id": null,
+      "notes": null
+    },
+    {
+      "segment_id": "S06",
+      "segment_name": "visually impaired users",
+      "scope": "universal",
+      "archetype_id": null,
+      "notes": null
+    },
+    {
+      "segment_id": "S07",
+      "segment_name": "non-native English speakers",
+      "scope": "universal",
+      "archetype_id": null,
+      "notes": null
+    },
+    {
+      "segment_id": "S08",
+      "segment_name": "low-bandwidth/rural users",
+      "scope": "universal",
+      "archetype_id": null,
+      "notes": null
+    },
+    {
+      "segment_id": "S09",
+      "segment_name": "price-sensitive users",
+      "scope": "universal",
+      "archetype_id": null,
+      "notes": null
+    },
+    {
+      "segment_id": "S10",
+      "segment_name": "users in emerging markets",
+      "scope": "universal",
+      "archetype_id": null,
+      "notes": null
+    },
+    {
+      "segment_id": "S11",
+      "segment_name": "content creators",
+      "scope": "archetype_locked",
+      "archetype_id": "A01;A03;A19",
+      "notes": null
+    },
+    {
+      "segment_id": "S12",
+      "segment_name": "drivers",
+      "scope": "archetype_locked",
+      "archetype_id": "A06",
+      "notes": null
+    },
+    {
+      "segment_id": "S13",
+      "segment_name": "couriers",
+      "scope": "archetype_locked",
+      "archetype_id": "A07;A09",
+      "notes": null
+    },
+    {
+      "segment_id": "S14",
+      "segment_name": "restaurant partners",
+      "scope": "archetype_locked",
+      "archetype_id": "A07;A08",
+      "notes": null
+    },
+    {
+      "segment_id": "S15",
+      "segment_name": "third-party sellers",
+      "scope": "archetype_locked",
+      "archetype_id": "A04",
+      "notes": null
+    },
+    {
+      "segment_id": "S16",
+      "segment_name": "hosts",
+      "scope": "archetype_locked",
+      "archetype_id": "A12",
+      "notes": null
+    },
+    {
+      "segment_id": "S17",
+      "segment_name": "workspace admins",
+      "scope": "archetype_locked",
+      "archetype_id": "A10;A20;A21",
+      "notes": null
+    },
+    {
+      "segment_id": "S18",
+      "segment_name": "developers",
+      "scope": "archetype_locked",
+      "archetype_id": "A11;A20;A21;A22",
+      "notes": null
+    },
+    {
+      "segment_id": "S19",
+      "segment_name": "students/learners",
+      "scope": "archetype_locked",
+      "archetype_id": "A14",
+      "notes": null
+    },
+    {
+      "segment_id": "S20",
+      "segment_name": "free-tier users",
+      "scope": "archetype_locked",
+      "archetype_id": "A02;A03;A14;A19",
+      "notes": null
+    },
+    {
+      "segment_id": "S21",
+      "segment_name": "enterprise buyers",
+      "scope": "archetype_locked",
+      "archetype_id": "A10;A20;A21;A22",
+      "notes": null
+    },
+    {
+      "segment_id": "S22",
+      "segment_name": "frequent travelers",
+      "scope": "archetype_locked",
+      "archetype_id": "A12",
+      "notes": null
+    }
+  ],
+  "genericProducts": [
+    {
+      "generic_id": "GP01",
+      "generic_product": "a short-video social app",
+      "archetype_id": "A01",
+      "notes": null
+    },
+    {
+      "generic_id": "GP02",
+      "generic_product": "a photo-sharing community",
+      "archetype_id": "A01",
+      "notes": null
+    },
+    {
+      "generic_id": "GP03",
+      "generic_product": "a professional networking app",
+      "archetype_id": "A01",
+      "notes": null
+    },
+    {
+      "generic_id": "GP04",
+      "generic_product": "a video streaming service",
+      "archetype_id": "A02",
+      "notes": null
+    },
+    {
+      "generic_id": "GP05",
+      "generic_product": "a kids’ streaming app",
+      "archetype_id": "A02",
+      "notes": null
+    },
+    {
+      "generic_id": "GP06",
+      "generic_product": "a music streaming app",
+      "archetype_id": "A03",
+      "notes": null
+    },
+    {
+      "generic_id": "GP07",
+      "generic_product": "a podcast app",
+      "archetype_id": "A03",
+      "notes": null
+    },
+    {
+      "generic_id": "GP08",
+      "generic_product": "an audiobook app",
+      "archetype_id": "A03",
+      "notes": null
+    },
+    {
+      "generic_id": "GP09",
+      "generic_product": "an online marketplace",
+      "archetype_id": "A04",
+      "notes": null
+    },
+    {
+      "generic_id": "GP10",
+      "generic_product": "a secondhand/resale app",
+      "archetype_id": "A04",
+      "notes": null
+    },
+    {
+      "generic_id": "GP11",
+      "generic_product": "a fashion shopping app",
+      "archetype_id": "A05",
+      "notes": null
+    },
+    {
+      "generic_id": "GP12",
+      "generic_product": "a sneaker resale app",
+      "archetype_id": "A05",
+      "notes": null
+    },
+    {
+      "generic_id": "GP13",
+      "generic_product": "a ride-hailing app",
+      "archetype_id": "A06",
+      "notes": null
+    },
+    {
+      "generic_id": "GP14",
+      "generic_product": "a self-driving taxi service",
+      "archetype_id": "A06",
+      "notes": null
+    },
+    {
+      "generic_id": "GP15",
+      "generic_product": "a food delivery app",
+      "archetype_id": "A07",
+      "notes": null
+    },
+    {
+      "generic_id": "GP16",
+      "generic_product": "a coffee chain mobile app",
+      "archetype_id": "A08",
+      "notes": null
+    },
+    {
+      "generic_id": "GP17",
+      "generic_product": "a fast-food ordering app",
+      "archetype_id": "A08",
+      "notes": null
+    },
+    {
+      "generic_id": "GP18",
+      "generic_product": "a grocery delivery app",
+      "archetype_id": "A09",
+      "notes": null
+    },
+    {
+      "generic_id": "GP19",
+      "generic_product": "a warehouse-club shopping app",
+      "archetype_id": "A09",
+      "notes": null
+    },
+    {
+      "generic_id": "GP20",
+      "generic_product": "a team chat tool",
+      "archetype_id": "A10",
+      "notes": null
+    },
+    {
+      "generic_id": "GP21",
+      "generic_product": "a note-taking app",
+      "archetype_id": "A10",
+      "notes": null
+    },
+    {
+      "generic_id": "GP22",
+      "generic_product": "a project management tool",
+      "archetype_id": "A10",
+      "notes": null
+    },
+    {
+      "generic_id": "GP23",
+      "generic_product": "a peer-to-peer payments app",
+      "archetype_id": "A11",
+      "notes": null
+    },
+    {
+      "generic_id": "GP24",
+      "generic_product": "a budgeting app",
+      "archetype_id": "A11",
+      "notes": null
+    },
+    {
+      "generic_id": "GP25",
+      "generic_product": "a vacation rental app",
+      "archetype_id": "A12",
+      "notes": null
+    },
+    {
+      "generic_id": "GP26",
+      "generic_product": "a flight booking app",
+      "archetype_id": "A12",
+      "notes": null
+    },
+    {
+      "generic_id": "GP27",
+      "generic_product": "a dating app",
+      "archetype_id": "A13",
+      "notes": null
+    },
+    {
+      "generic_id": "GP28",
+      "generic_product": "a language-learning app",
+      "archetype_id": "A14",
+      "notes": null
+    },
+    {
+      "generic_id": "GP29",
+      "generic_product": "an online course platform",
+      "archetype_id": "A14",
+      "notes": null
+    },
+    {
+      "generic_id": "GP30",
+      "generic_product": "a running/fitness tracker",
+      "archetype_id": "A15",
+      "notes": null
+    },
+    {
+      "generic_id": "GP31",
+      "generic_product": "a calorie-tracking app",
+      "archetype_id": "A15",
+      "notes": null
+    },
+    {
+      "generic_id": "GP32",
+      "generic_product": "a sleep-tracking wearable",
+      "archetype_id": "A15",
+      "notes": null
+    },
+    {
+      "generic_id": "GP33",
+      "generic_product": "a mobile match-3 game",
+      "archetype_id": "A16",
+      "notes": null
+    },
+    {
+      "generic_id": "GP34",
+      "generic_product": "a multiplayer shooter",
+      "archetype_id": "A16",
+      "notes": null
+    },
+    {
+      "generic_id": "GP35",
+      "generic_product": "a messaging app",
+      "archetype_id": "A17",
+      "notes": null
+    },
+    {
+      "generic_id": "GP36",
+      "generic_product": "a video calling app",
+      "archetype_id": "A17",
+      "notes": null
+    },
+    {
+      "generic_id": "GP37",
+      "generic_product": "a local business review app",
+      "archetype_id": "A18",
+      "notes": null
+    },
+    {
+      "generic_id": "GP38",
+      "generic_product": "a maps/navigation app",
+      "archetype_id": "A18",
+      "notes": null
+    },
+    {
+      "generic_id": "GP39",
+      "generic_product": "a news subscription app",
+      "archetype_id": "A19",
+      "notes": null
+    },
+    {
+      "generic_id": "GP40",
+      "generic_product": "a newsletter platform",
+      "archetype_id": "A19",
+      "notes": null
+    },
+    {
+      "generic_id": "GP41",
+      "generic_product": "a cloud hosting platform",
+      "archetype_id": "A20",
+      "notes": null
+    },
+    {
+      "generic_id": "GP42",
+      "generic_product": "a developer API platform",
+      "archetype_id": "A20",
+      "notes": null
+    },
+    {
+      "generic_id": "GP43",
+      "generic_product": "an AI chat assistant",
+      "archetype_id": "A21",
+      "notes": null
+    },
+    {
+      "generic_id": "GP44",
+      "generic_product": "an AI coding tool",
+      "archetype_id": "A21",
+      "notes": null
+    },
+    {
+      "generic_id": "GP45",
+      "generic_product": "a developer GPU platform",
+      "archetype_id": "A22",
+      "notes": null
+    }
+  ],
+  "binTemplates": [
+    {
+      "bin": "1",
+      "bin_name": "Improve",
+      "template_id": "T1a",
+      "template_string": "IMPROVE: {feature} / FOR: {product}",
+      "variables_used": "feature, product",
+      "compatibility_rules": "feature.archetype_id must match product.archetype_id"
+    },
+    {
+      "bin": "1",
+      "bin_name": "Improve",
+      "template_id": "T1b",
+      "template_string": "IMPROVE: {product} / FOR: {user_segment}",
+      "variables_used": "product, user_segment",
+      "compatibility_rules": "segment universal OR segment.archetype_id contains product.archetype_id"
+    },
+    {
+      "bin": "2",
+      "bin_name": "Design",
+      "template_id": "T2a",
+      "template_string": "DESIGN: {product} / FOR: {user_segment}",
+      "variables_used": "product(generic), user_segment",
+      "compatibility_rules": "use GENERIC product category, NOT named brand; segment compat as above"
+    },
+    {
+      "bin": "2",
+      "bin_name": "Design",
+      "template_id": "T2b",
+      "template_string": "DESIGN: {company}'s {feature} / FOR: {user_segment}",
+      "variables_used": "company, feature, user_segment",
+      "compatibility_rules": "feature.archetype_id==company.archetype_id; segment compat"
+    },
+    {
+      "bin": "3",
+      "bin_name": "Measure",
+      "template_id": "T3",
+      "template_string": "DEFINE SUCCESS METRICS FOR: {feature} / ON: {product}",
+      "variables_used": "feature, product",
+      "compatibility_rules": "feature.archetype_id==product.archetype_id"
+    },
+    {
+      "bin": "4",
+      "bin_name": "Grow",
+      "template_id": "T4a",
+      "template_string": "GROW: {metric} / FOR: {product}",
+      "variables_used": "metric(product-level), product",
+      "compatibility_rules": "metric.level==product; metric.archetype_id==product.archetype_id OR universal"
+    },
+    {
+      "bin": "4",
+      "bin_name": "Grow",
+      "template_id": "T4b",
+      "template_string": "GROW: {metric} / FOR: {company}'s {feature}",
+      "variables_used": "metric(feature-level), company, feature",
+      "compatibility_rules": "metric.level==feature; feature.archetype==company.archetype; metric compat"
+    },
+    {
+      "bin": "5",
+      "bin_name": "Diagnose",
+      "template_id": "T5",
+      "template_string": "DIAGNOSE: {product}'s {metric} {direction} {X}% → WHERE DO YOU LOOK?",
+      "variables_used": "product, metric, direction, X",
+      "compatibility_rules": "metric.archetype matches product OR universal; direction=metric.direction_bad; X random 5-30"
+    }
+  ]
+}

@@ -1,0 +1,788 @@
+/* All the styles and layout rules for the app. */
+@import 'tailwindcss';
+@import './tokens.css';
+
+/* ============================= Base ============================= */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 960px) {
+  #root {
+    overflow: auto;
+    height: auto;
+    min-height: 100%;
+  }
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  background: var(--color-table);
+  color: var(--color-ink);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 2px;
+}
+
+/* ============================= App shell ============================= */
+/*
+  2-column grid: left (220px) = panels, right (1fr) = card
+  row 1 = brand, row 2 = deck tabs (full width), row 3 = left | right
+*/
+.app {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 2rem 2rem 2rem 3.25rem;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: auto auto 1fr;
+  column-gap: var(--space-6);
+  row-gap: var(--space-3);
+  align-items: start;
+  box-sizing: border-box;
+}
+
+.col-brand {
+  grid-column: 1 / 3;
+  grid-row: 1;
+  margin-bottom: var(--space-4);
+}
+
+.col-tabs {
+  grid-column: 1 / 3;
+  grid-row: 2;
+  margin-top: var(--space-6);
+}
+
+.col-left {
+  grid-column: 1;
+  grid-row: 3;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding-bottom: 4rem;
+}
+
+.col-left-panels {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: var(--space-4);
+}
+
+.col-right {
+  grid-column: 2;
+  grid-row: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-4);
+  padding-left: 14rem;
+  padding-bottom: 3rem;
+  container-type: inline-size;
+  container-name: stage-col;
+}
+
+/*
+  When col-right is narrower than the natural card width, scale the card
+  and all hint positioning math by overriding the three sizing tokens
+  as percentages of the available column width (100cqi).
+*/
+
+@media (max-width: 960px) {
+  .app {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    min-height: auto;
+    padding-bottom: 2rem;
+  }
+
+  .col-brand { grid-column: 1; grid-row: 1; }
+  .col-tabs  { grid-column: 1; grid-row: 2; }
+  .col-right { grid-column: 1; grid-row: 3; }
+  .col-left  { grid-column: 1; grid-row: 4; }
+}
+
+/* ============================= Brand ============================= */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  background: var(--color-ink);
+  border-radius: var(--radius-sm);
+  flex: none;
+}
+
+.brand-mark-inner {
+  width: 44%;
+  height: 44%;
+  background: var(--color-paper);
+  border-radius: 3px;
+}
+
+.brand-word {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-size: 32px;
+  line-height: 1;
+}
+
+/* ============================= Deck tabs ============================= */
+.deck-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-pill);
+  border: 1px solid #a8a8a4;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+
+.tab-active {
+  background: #d0d0cc;
+  color: var(--color-ink);
+}
+
+/* ============================= Stage ============================= */
+.stage-group {
+  /* Poker card ratio 1:1.4 (2.5" × 3.5"), scales with container */
+  --hero-w: min(420px, 80cqi);
+  --hero-h: min(calc(var(--hero-w) * 1.4), calc(100svh - 260px));
+  --hint-w: calc(var(--hero-w) * 0.9);
+  --hint-h: calc(var(--hero-h) * 0.9);
+  --hint-tab: calc(var(--hero-w) * 0.128);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-4);
+  align-self: center;
+  animation: stage-deal-in var(--dur) var(--ease) both;
+}
+
+/* ============================= Hint card flip ============================= */
+.hint-card-wrap {
+  flex: none;
+  width: var(--hint-w);
+  min-height: var(--hint-h);
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.hint-card-inner {
+  display: grid;
+  width: 100%;
+  min-height: var(--hint-h);
+  transform-style: preserve-3d;
+  transition: transform 500ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: transform;
+}
+
+.hint-card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.hint-card-face {
+  grid-area: 1 / 1;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background: var(--color-paper);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  min-height: var(--hint-h);
+}
+
+.hint-card-front {
+  position: relative;
+  overflow: hidden;
+}
+
+.hint-card-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.hint-card-back {
+  transform: rotateY(180deg);
+  overflow: hidden;
+}
+
+.prompt-card {
+  /* flex: none prevents the card from stretching inside the flex row */
+  flex: none;
+  position: relative;
+  z-index: 4;
+  width: var(--hero-w);
+  min-height: var(--hero-h);
+  padding: 2.75rem;
+  border-radius: var(--radius-lg);
+  background: var(--color-ink);
+  color: var(--color-paper);
+  transform: rotate(-1deg);
+  box-shadow: var(--shadow-hero);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  box-sizing: border-box;
+  will-change: transform;
+}
+
+
+.prompt-pills {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25em 0.75em;
+  border-radius: var(--radius-pill);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.pill-deck {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.pill-arch {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.prompt-text {
+  margin: 0;
+  flex: 1;
+  font-weight: 700;
+  font-size: clamp(22px, 11.8cqi, 44px);
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+}
+
+.prompt-how {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--space-4);
+}
+
+.prompt-how-title {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.prompt-how-steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  counter-reset: how-step;
+}
+
+.prompt-how-steps li {
+  counter-increment: how-step;
+  display: flex;
+  gap: var(--space-3);
+  align-items: baseline;
+  font-size: clamp(18px, 5cqi, 26px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--color-paper);
+}
+
+.prompt-how-steps li::before {
+  content: counter(how-step);
+  flex: none;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.4);
+  min-width: 1rem;
+  padding-top: 0.25em;
+}
+
+.prompt-foot {
+  display: flex;
+  align-items: center;
+}
+
+.prompt-brand {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: -0.01em;
+}
+
+/* ============================= Hint card ============================= */
+.hint-body {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.hint-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  color: #767672;
+  border: 1px solid #b0b0ac;
+  padding: 0.3em 0.65em;
+  border-radius: var(--radius-pill);
+}
+
+.hint-framework-label {
+  margin: 0 0 var(--space-3) 0;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-gray);
+}
+
+.hint-empty {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-gray);
+}
+
+.hint-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.hint-step {
+  display: flex;
+  gap: var(--space-2);
+  align-items: baseline;
+}
+
+.hint-num {
+  flex: none;
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: var(--color-ink);
+  min-width: 0.9rem;
+}
+
+.hint-step-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.45;
+  color: var(--color-ink);
+}
+
+/* ============================= Console ============================= */
+.console {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.console-timer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.btn {
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-deal {
+  width: 100%;
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-md);
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.stepper {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-3);
+  border: 1px solid #a8a8a4;
+  border-radius: var(--radius-md);
+}
+
+.step {
+  width: 1.5rem;
+  height: auto;
+  border: none;
+  background: transparent;
+  border-radius: var(--radius-sm);
+  font: inherit;
+  font-size: 0.95rem;
+  cursor: pointer;
+  color: var(--color-ink);
+}
+
+.step:disabled {
+  color: var(--color-gray);
+  cursor: not-allowed;
+}
+
+.step-value {
+  min-width: 3rem;
+  text-align: center;
+  font-size: 0.95rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  color: var(--color-ink);
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.step-num {
+  animation: tick-in 100ms ease-out both;
+}
+
+.step-suffix {
+  margin-left: 0.25em;
+}
+
+.step-value.danger {
+  color: var(--color-red);
+}
+
+.transport {
+  display: inline-flex;
+  gap: var(--space-2);
+}
+
+.btn-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid #a8a8a4;
+  border-radius: var(--radius-sm);
+  background: var(--color-paper);
+  color: var(--color-ink);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.btn-icon.active {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+/* ============================= Panels ============================= */
+.panel {
+  background: var(--color-paper);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.panel-title {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gray);
+}
+
+.session-stats {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.session-stats-row {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.session-stats-row .session-stat {
+  flex: 1;
+}
+
+.session-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-1);
+  padding: var(--space-3);
+  border: 1px solid rgba(10, 10, 10, 0.08);
+  border-radius: var(--radius-sm);
+}
+
+.stat-label {
+  font-size: 0.65rem;
+  font-weight: 400;
+  color: var(--color-gray);
+  letter-spacing: 0.03em;
+}
+
+.stat-value {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.stat-value--sm {
+  font-size: 1rem;
+}
+
+.panel-empty {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--color-gray);
+}
+
+.recent-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.recent-item {
+  font-size: 0.78rem;
+  color: var(--color-ink);
+  line-height: 1.4;
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid rgba(10, 10, 10, 0.07);
+}
+
+.recent-item:first-child {
+  padding-top: 0;
+}
+
+.recent-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.how-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.how-list li {
+  font-size: 0.78rem;
+  color: var(--color-ink);
+  line-height: 1.45;
+}
+
+.shortcuts-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.shortcut-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.shortcut-label {
+  font-size: 0.78rem;
+  color: var(--color-ink);
+}
+
+.shortcut-key {
+  font-family: inherit;
+  font-size: 0.63rem;
+  font-weight: 600;
+  background: var(--color-table);
+  border: 1px solid rgba(10, 10, 10, 0.15);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  padding: 0.2em 0.55em;
+  color: var(--color-ink);
+  white-space: nowrap;
+}
+
+/* ============================= Recent prompts popup ============================= */
+.popup-anchor {
+  position: relative;
+}
+
+.popup-trigger-btn {
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+  border: none;
+}
+
+.popup-trigger-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.popup-trigger-hint {
+  font-size: 0.6rem;
+  font-weight: 500;
+  color: #c0c0bc;
+  margin-top: 2px;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.popup-chevron {
+  font-size: 1.1rem;
+  color: var(--color-gray);
+  display: inline-block;
+  transition: transform 200ms var(--ease);
+  line-height: 1;
+  flex: none;
+}
+
+.popup-chevron.open {
+  transform: rotate(90deg);
+}
+
+.popup-pane {
+  position: fixed;
+  width: 280px;
+  overflow-y: auto;
+  background: var(--color-paper);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-card);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+/* ============================= Motion ============================= */
+@keyframes stage-deal-in {
+  from {
+    opacity: 0;
+    translate: 0 10px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes tick-in {
+  from {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* ============================= Mobile ============================= */
+/*
+  On narrow screens the hint can't slide right without going off-screen.
+  Keep it absolutely positioned but open it as a full overlay on top of
+  the card (translateX(0) + z-index above the card) instead of beside it.
+  Stage-group stops shifting left when the hint is an overlay.
+*/
+@media (max-width: 520px) {
+  .prompt-card {
+    transform: none;
+  }
+}
